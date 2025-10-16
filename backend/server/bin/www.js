@@ -6,7 +6,7 @@ const path = require('path');
 
 mongoose.set('strictQuery', true) 
 // replace <dbuser> and <dbpassword> with your MongoDB Atlas database user credentials
-const uri = 'mongodb+srv://prakharmrk50:gayatri108@cluster0.f4dos.mongodb.net/?retryWrites=true&w=majority';
+const uri = '//your url';
 mongoose.connect(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -18,15 +18,6 @@ mongoose.connect(uri, {
   console.log('Error connecting to MongoDB Atlas:', error);
 });
 
-// mongoose.connect('mongodb://127.0.0.1:27017/MindWaves', {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true
-// }, (err) => {
-//     if (err) {
-//         console.log("err", err);
-//     }
-//     console.log('Connected')
-// })
 
 app.use(express.static(path.join(__dirname, '../../../build')));
 
